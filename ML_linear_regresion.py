@@ -41,10 +41,10 @@ def estimator(x, y):
     plt.xlabel("length [mm]")
     plt.ylabel("temperature [deg Celcius]")
     plt.title("Metal Rod Length Measured at Varying Temperatures")
-    # plt.show()
+    plt.show()
 
     print('Therefore, y = ' + str(slope) + 'x + ' + str(y_intercept), 'With a Standard Deviation Error of : ' + str(sd_error), sep = "\n")
 
-x = [43, 21, 25, 42, 57, 59]
-y = [99, 65, 79, 75, 87, 81]
+x = [43, 321, 25, 42, 57, 59]
+y = [99, 645, 79, 75, 87, 81]
 estimator(x, y)
