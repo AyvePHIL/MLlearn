@@ -32,7 +32,17 @@ def minimumSwaps(arr):
             temp[t] = temp[i + 1]
     return swaps
 
-
+def minimumSwappnumber(arr):
+    noofswaps = 0
+    for i in range(len(arr)):
+        while arr[i] != i + 1:
+            temp = arr[i]
+            arr[i] = arr[arr[i] - 1]
+            arr[temp - 1] = temp
+            noofswaps += 1
+    print noofswaps
+    
+    
 # A QuickSort algorithm where we pivot about a specified int in a array by partitioning the array into two parts
 def quick_sort(sequence):
     if len(sequence)<=1:
@@ -55,3 +65,4 @@ testing_array = [3, 56, 0, 45, 2324, 2, 12, 123, 434, 670, 4549, 3, 4.5, 6]
 
 print(bubbleSort(testing_array))
 print(quick_sort(testing_array))
+print(minimumSwappnumber(testing_array))

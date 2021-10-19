@@ -32,8 +32,7 @@ def estimator(x, y):
     y_intercept = mean_y - slope * mean_x  # y-intercept when x (our independent variable) is zero!
 
     SSE = SS_yy - slope * SS_xy  # Sum of Square ERROR (SSE)
-    variance_error = SSE / (
-                len(x) - 2)  # Variance error (the smaller the better) in relation to our linear relationship
+    variance_error = SSE / (len(x) - 2)  # Variance error (the smaller the better) in relation to our linear relationship
     sd_error = (variance_error) ** 0.5  # Standard error, the smaller the better!
 
     # Begin plotting a scatter of the data and label as required
@@ -45,6 +44,6 @@ def estimator(x, y):
 
     print('Therefore, y = ' + str(slope) + 'x + ' + str(y_intercept), 'With a Standard Deviation Error of : ' + str(sd_error), sep = "\n")
 
-x = [43, 321, 25, 42, 57, 59]
-y = [99, 645, 79, 75, 87, 81]
+x = [43, 21, 25, 42, 57, 59]
+y = [99, 65, 79, 75, 87, 81]
 estimator(x, y)
